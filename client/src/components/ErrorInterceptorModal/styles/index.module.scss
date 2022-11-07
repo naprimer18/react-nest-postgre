@@ -1,0 +1,25 @@
+@import "../../../commonStyles/main.module";
+
+.description {
+  @include font_h3;
+  text-align: center;
+  margin-bottom: $main-margin;
+}
+
+.steps {
+  @include font_p_dark;
+
+  li {
+    list-style: none;
+    margin-bottom: 14px;
+
+    &::before {
+      content: url("../../../commonComponents/ModalWindowController/ModalWindow/images/stepIcon.svg");
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      vertical-align: bottom;
+      padding-right: 5px;
+    }
+  }
+}

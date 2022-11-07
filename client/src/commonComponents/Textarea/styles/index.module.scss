@@ -1,0 +1,45 @@
+@import "../../../commonStyles/main.module";
+
+.textareaContainer {
+  @include flex($dir: column);
+  width: 100%;
+
+  .textareaLabel {
+    @include font_p_dark;
+    color: $text-color;
+    user-select: none;
+    margin-top: $main-margin;
+
+    &:after {
+      content: ":";
+    }
+  }
+
+  .requiredField:before {
+    content: "*";
+    color: red;
+    padding-right: 2px;
+  }
+
+  .textarea {
+    @include font_p_dark;
+    @include borderFocus;
+    outline: none;
+    border: solid 1px $border-color-primary;
+    padding: 10px;
+    min-height: 30px;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: #818181;
+    }
+
+    &.error {
+      border-color: $error-color;
+    }
+  }
+}
+
+.error {
+  color: $error-color;
+}

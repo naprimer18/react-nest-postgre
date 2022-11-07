@@ -1,0 +1,15 @@
+@import 'src/commonStyles/main.module';
+
+.notFoundPageContainer {
+  @include flex($dir: column, $just: space-around, $ali: center);
+}
+
+.containerBody {
+  margin: 15px;
+}
+
+.notFoundPageImage {
+  width: 40%;
+  height: auto;
+  display: block;
+}

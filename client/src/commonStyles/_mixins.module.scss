@@ -1,0 +1,249 @@
+@import './constants.module';
+
+// fonts
+@mixin _fontProps($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin font_h1($size: $h1, $weight: 700, $color: $text-color) {
+  @include _fontProps($size, $weight, $color);
+}
+
+@mixin font_h2($size: $h2, $weight: 700, $color: inherit) {
+  @include _fontProps($size, $weight, $color);
+}
+
+@mixin font_h3($size: $h3, $weight: 400, $color: $text-color) {
+  @include _fontProps($size, $weight, $color);
+}
+
+@mixin font_h4($size: $h4, $weight: 400, $color: inherit) {
+  @include _fontProps($size, $weight, $color);
+}
+
+@mixin font_h5($size: $h5, $weight: 400, $color: inherit) {
+  @include _fontProps($size, $weight, $color);
+}
+
+@mixin font_h6($size: $h6, $weight: 400, $color: inherit) {
+  @include _fontProps($size, $weight, $color);
+}
+
+@mixin font_p_light($size: $p, $weight: 400, $color: #fff) {
+  @include _fontProps($size, $weight, $color);
+}
+
+@mixin font_p_dark($size: $p, $weight: 400, $color: $text-color) {
+  @include _fontProps($size, $weight, $color);
+}
+
+// device size
+@mixin small() {
+  @media only screen and (max-width: #{$small}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (max-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// flex box
+@mixin flex(
+  $disp: flex,
+  $dir: row,
+  $wrap: nowrap,
+  $just: inherit,
+  $ali: inherit
+) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $ali;
+}
+
+@mixin absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin hideScrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin customScrollbar {
+  scrollbar-color: $color-bg-main-extra $color-bg-primary;
+  scrollbar-width: thin;
+  cursor: auto;
+
+  &::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+    box-shadow: inset 1px 0 5px $color-bg-main;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: solid 1px $color-bg-main;
+    border-radius: 1px;
+    box-shadow: inset 0 0 5px $color-bg-main;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0 0 7px $color-bg-main;
+  }
+}
+
+@mixin a {
+  text-decoration: none;
+  color: #333;
+  border: 1px solid $text-color;
+  padding: 5px;
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+// button
+@mixin btn {
+  @include flex($just: center, $ali: center);
+  @include font_p_dark($weight: 600);
+  @include fieldPadding;
+  @include borderFocus;
+  white-space: pre;
+  border: 1px solid $border-color-primary;
+  border-radius: $b-rad-small;
+  height: $btn-height;
+  min-width: $btn-width;
+  width: max-content;
+  background-color: $color-bg-primary;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    box-shadow: none;
+    border: 1px solid $border-color-disabled;
+    background: $color-bg-primary-disabled;
+  }
+
+  &:hover:not(:disabled) {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+}
+
+// checkbox
+@mixin checkbox {
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  min-height: 16px;
+  border: solid 1px $color-bg-primary;
+  border-radius: 2px;
+  margin: 10px;
+  background-color: $color-bg-primary;
+  cursor: pointer;
+
+  &.checked {
+    background: url('../commonComponents/Checkbox/images/checked-dark.svg')
+      center no-repeat #ffffff;
+  }
+}
+
+// padding
+@mixin fieldPadding {
+  padding: 10px 15px;
+}
+
+// focus
+@mixin borderFocus {
+  &:focus {
+    outline: 2px solid $focus-color;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $focus-color;
+    border-radius: 0;
+  }
+}
+
+// cards style
+@mixin cardsContainer {
+  width: 175px;
+  min-height: 200px;
+  margin: 10px;
+  box-sizing: border-box;
+  border: 1px solid $color-bg-main;
+  border-top: solid 5px $color-bg-main;
+  border-radius: 2px;
+  word-wrap: inherit;
+  transition: all 0.1s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: inset 0 3px 0 $color-bg-main, 0 0 3px $color-bg-main;
+  }
+}
+
+@mixin arrow($color: #fff, $direction: 'top', $size: 9, $translateX: 0px) {
+  display: block;
+  width: $size + px;
+  height: $size + px;
+  border: 2px solid $color;
+  border-bottom: none;
+  border-left: none;
+
+  @if ($direction == 'right') {
+    transform: rotate(-45deg) translate(calc(#{$translateX} - 2px), 2px);
+  }
+  @if ($direction == 'top') {
+    transform: rotate(45deg) translateX($translateX);
+  }
+  @if ($direction == 'left') {
+    transform: rotate(135deg) translateX($translateX);
+  }
+  @if ($direction == 'bottom') {
+    transform: rotate(225deg) translateX($translateX);
+  }
+}

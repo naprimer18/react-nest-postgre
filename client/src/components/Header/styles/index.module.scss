@@ -1,0 +1,26 @@
+@import "src/commonStyles/main.module";
+
+.header {
+  @include flex($ali: center);
+  width: 100%;
+  height: $header-height;
+  background-color: $color-bg-main;
+  box-shadow: 0 0 1px $color-bg-main;
+  z-index: $zIndex-header;
+  position: relative;
+
+  .linkContainer {
+    @include flex($ali: center, $just: space-around);
+
+    > button {
+      color: $text-color-secondary;
+      text-transform: uppercase;
+      margin: 0 10px;
+
+      &:hover {
+        opacity: 0.8;
+        transition: 0.2s;
+      }
+    }
+  }
+}

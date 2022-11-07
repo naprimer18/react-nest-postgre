@@ -1,0 +1,45 @@
+@import "colors.module";
+
+// device width
+$small: 320px;
+$mobile: 414px;
+$tablet: 768px;
+$large: 1024px;
+$desktop: 1280px;
+
+// font size
+$h1: 32px;
+$h2: 28px;
+$h3: 24px;
+$h4: 22px;
+$h5: 20px;
+$h6: 18px;
+$p: 16px;
+$css_content: 15px;
+$small: 14px;
+
+//height
+$btn-height: 38px;
+$header-height: 50px;
+$breadcrumbs-height: 40px;
+
+// width
+$btn-width: 150px;
+$btn-width-wide: 200px;
+
+//border
+$b-rad-small: 2px;
+$b-rad-middle: 8px;
+$b-rad-large: 24px;
+
+//z-index
+$zIndex-left-menu: 1;
+$zIndex-tabs: 100;
+$zIndex-header: 200;
+$zIndex-popup: 300;
+
+
+// margins & paddings
+$main-margin: 30px;
+$main-padding: 30px;
+$content-padding: 20px;

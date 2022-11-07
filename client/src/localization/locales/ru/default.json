@@ -1,0 +1,210 @@
+{
+  "appName": "Маркер",
+  "welcome": "Приветствуем в",
+  "pageNames": {
+    "workspaces": "Рабочие пространства",
+    "projects": "Проекты",
+    "addWorkspace": "Добавить рабочее пространство",
+    "addProject": "Добавить проект",
+    "editWorkspace": "Изменить рабочее пространство",
+    "editProject": "Изменить проект"
+  },
+  "buttons": {
+    "logIn": "Войти",
+    "logOut": "Выйти",
+    "help": "Помощь",
+    "upload": "Загрузить",
+    "addWorkspace": "Добавить рабочее пространство",
+    "addProject": "Добавить проект",
+    "remove": "Удалить",
+    "edit": "Редактировать",
+    "saveChanges": "Сохранить изменения",
+    "close": "Закрыть",
+    "yes": "Да",
+    "toolsHelp": "Справка"
+  },
+  "links": {
+    "about": "О нас",
+    "addWorkspaces": "Добавить рабочие пространства",
+    "marker": "Маркер"
+  },
+  "cardsWrapper": {
+    "addCard": {
+      "workspace": {
+        "title": "Новое рабочее пространство",
+        "tooltipText": "Добавить рабочее пространство"
+      },
+      "project": {
+        "title": "Новый проект",
+        "tooltipText": "Добавить новый проект"
+      },
+      "images": {
+        "title": "Новый файл",
+        "tooltipText": "Добавить новый файл"
+      }
+    },
+    "addWorkspaces": "Добавить рабочие пространства"
+  },
+  "formLabelTitles": {
+    "nameWorkspace": "Название рабочего пространства",
+    "nameProject": "Название проекта",
+    "descriptionWorkspace": "Описание рабочего пространства",
+    "descriptionProject": "Описание проекта"
+  },
+  "validation": {
+    "minNumber": "минимальное количество символов",
+    "maxNumber": "максимальное количество символов",
+    "notEmpty": "пожалуйста, заполните поле",
+    "wrongSymbols": "не используйте спецсимволы: $;%:*() и др.",
+    "includeTag": "тег уже существует",
+    "wrongCollectionName": "Такое имя уже используется, введите другое"
+  },
+  "popup": {
+    "workspaces": "Рабочее пространство",
+    "projects": "Проект",
+    "warning": "Вы действительно хотите выйти?",
+    "imagesCardContent": {
+      "imageDetails": "Детали изображения",
+      "imageName": "Имя изображения",
+      "addedBy": "Добавлено",
+      "lastEditedBy": "Последний раз редактировалось",
+      "lastUpdate": "Последнее обновление",
+      "usedInProject": "Используется в проекте"
+    }
+  },
+  "loading": "Загрузка",
+  "errors": {
+    "commonTitle": "Упс... Что-то пошло не так!",
+    "solvingStepsMessage": "Чтобы исправить ошибку, попробуйте следующие решения:",
+    "responseError": {
+      "description": "Ошибка загрузки данных.",
+      "steps": {
+        "one": "Перезагрузите страницу",
+        "two": "Посетите страницу позже",
+        "three": "Обратитесь в службу технической поддержки"
+      }
+    }
+  },
+  "workspacePage": {
+    "imagesTitle": "Изображения",
+    "projectsInstruments": {
+      "filterTitle": "Отображать: ",
+      "addImagesInProjectButton": "Добавить в проект"
+    }
+  },
+  "userGuide": {
+    "title": "Добро пожаловать в Marker",
+    "description": "Страница руководства пользователя находится в процессе разработки"
+  },
+  "notFound": {
+    "return": "Возвратиться на главную страницу",
+    "descriptions": {
+      "image": "Изображение страницы не найдено",
+      "body": "Простите, но данной страницы не существует"
+    }
+  },
+  "tooltipText": {
+    "projectsCount": "Колличество проетков",
+    "filesCount": "Количество добавленных в проекты файлов",
+    "imageMarkup": "Количество размеченных фото",
+    "dateUploadPhotos": "Дата последней загруженной фотографии",
+    "lastImageMarkup": "Дата последней разметки изображения",
+    "imageDetails": "Детали изображения"
+  },
+  "select": {
+    "chooseProject": "Выберите проект"
+  },
+  "calendar": {
+    "placeholder": "Выберите даты"
+  },
+  "imagesUploader": {
+    "uploadButton": "Нажмите для загрузки",
+    "addToGallery": "Добавить в галерею",
+    "addToProject": "Добавить в проект"
+  },
+  "sharing": {
+    "select": {
+      "email": "Поиск почты пользователя",
+      "role": "Выберите роль пользователя",
+      "noOptions": "Нет вариантов выбора результата поиска"
+    },
+    "blocksTitles": {
+      "invite": "Добавить участника",
+      "exist": "Существующие участники"
+    },
+    "invite": "Добавить",
+    "remove": "Удалить"
+  },
+  "tags": {
+    "createPlaceholder": "Название тега",
+    "addButton": "ОК",
+    "confirmButton": "Подтвердить"
+  },
+  "kanva": {
+    "layerList": {
+      "operations": {
+        "add": "Добавить новый слой"
+      }
+    },
+    "instruments": {
+      "polygon": "Полигон",
+      "line": "Линия",
+      "rectangle": "Квадрат",
+      "addPoint": "Добавить точку",
+      "color": "Выбрать Цвет",
+      "thickness": "Толщина линии",
+      "hand": "Перемещение изображения",
+      "select": "Выделение фигур",
+      "delete": "Удаление фигур",
+      "tags": "Теги",
+      "layers": "Слои",
+      "prevStep": "Предыдущий шаг",
+      "nextStep": "Следующий шаг",
+      "resize": "Изменение размера",
+      "zoomPlus": "Зум плюс",
+      "zoomMinus": "Зум минус",
+      "drawCursor": "Курсор рисования"
+    },
+    "shortcuts": {
+      "title": "Информация по инструментам",
+      "drawCursor": {
+        "dblClck": "двойной клик - удалить точку",
+        "altClck": "Alt+клик - показать теги",
+        "rghtClck": "правый клик - выделить фигуру"
+      }
+    }
+  },
+  "dateRangePicker": {
+    "staticRangesLabels": {
+      "today": "Сегодня",
+      "yesterday": "Вчера",
+      "thisWeek": "Эта неделя",
+      "lastWeek": "Прошлая неделя",
+      "thisMonth": "Этот месяц",
+      "lastMonth": "Прошлый месяц"
+    },
+    "inputRangesLabels": {
+      "daysUpToToday": "колличество дней до сегодняшнего дня",
+      "daysStartingToday": "колличество дней начиная с сегодняшнего дня"
+    }
+  },
+  "sideBar": {"tabs": {"layers": "Вкладка слоев", "images": "Вкладка изображений"}},
+  "default": {"noData": "Простите, нет данных для отображения"},
+  "imagesFilter": {
+    "visabilityButton": {
+      "show": "Показать фильтры",
+      "hide": "Скрыть фильтры"
+    },
+    "clearFilter": "Очистить фильтры",
+    "options": {
+      "byDate": "По дате:",
+      "byTime": {
+        "title": "По времени (за последние):",
+        "firstTime": "1 час",
+        "secondTime": "6 часов",
+        "thirdTime": "24 часа"
+      },
+      "byUsers": "По пользователям"
+    }
+  }
+}

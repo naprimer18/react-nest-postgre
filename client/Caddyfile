@@ -1,0 +1,19 @@
+:80
+
+browse
+
+root /srv
+
+index index.html
+
+rewrite /all /
+
+rewrite /api /inspections
+
+log stdout
+
+errors stdout {
+
+    404 index.html
+
+}

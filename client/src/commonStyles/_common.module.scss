@@ -1,0 +1,6 @@
+@import "./main.module";
+
+body {
+  @include hideScrollbar;
+  overflow: hidden;
+}

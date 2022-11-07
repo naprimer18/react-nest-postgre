@@ -1,0 +1,30 @@
+@import "../../../../../commonStyles/main.module.scss";
+
+.modalHeader {
+  @include flex($dir: row, $just: flex-end, $ali: center);
+  background-color: $text-color-secondary;
+  width: 100%;
+  border-bottom: 1px solid #bfbfbf;
+  position: relative;
+
+  button {
+    align-self: flex-end;
+    height: auto;
+    padding: 5px;
+
+    &.closeModalButton {
+      align-self: baseline;
+    }
+
+    svg {
+      width: 20px;
+      height: 30px;
+      margin: 0;
+      fill: $icon-color;
+
+      &:hover {
+        fill: $text-color;
+      }
+    }
+  }
+}

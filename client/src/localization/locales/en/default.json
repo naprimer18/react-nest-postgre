@@ -1,0 +1,211 @@
+{
+  "appName": "Marker",
+  "welcome": "Welcome to",
+
+  "pageNames": {
+    "workspaces": "Workspaces",
+    "projects": "Projects",
+    "addWorkspace": "Add workspace",
+    "addProject": "Add project",
+    "editWorkspace": "Edit workspace",
+    "editProject": "Edit project"
+  },
+  "buttons": {
+    "logIn": "Log in",
+    "logOut": "Log out",
+    "help": "Help",
+    "upload": "Upload",
+    "addWorkspace": "Add workspace",
+    "addProject": "Add project",
+    "remove": "Remove",
+    "edit": "Edit",
+    "saveChanges": "Save changes",
+    "close": "Close",
+    "yes": "Yes",
+    "toolsHelp": "Tools help"
+  },
+  "links": {
+    "about": "About",
+    "addWorkspaces": "Add workspaces",
+    "marker": "Marker"
+  },
+  "cardsWrapper": {
+    "addCard": {
+      "workspace": {
+        "title": "New workspace",
+        "tooltipText": "Add new workspace"
+      },
+      "project": {
+        "title": "New project",
+        "tooltipText": "Add new project"
+      },
+      "images": {
+        "title": "New file",
+        "tooltipText": "Add new file"
+      }
+    },
+    "addWorkspaces": "Add workspaces"
+  },
+  "formLabelTitles": {
+    "nameWorkspace": "Workspace name",
+    "nameProject": "Project name",
+    "descriptionWorkspace": "Workspace description",
+    "descriptionProject": "Project description"
+  },
+  "validation": {
+    "minNumber": "minimum number of symbols",
+    "maxNumber": "maximum number of symbols",
+    "notEmpty": "please fill in the field",
+    "wrongSymbols": "dont use special symbols: $;%:*() etc.",
+    "includeTag": "tag already exists",
+    "wrongCollectionName": "This name already exists, please enter another"
+  },
+  "popup": {
+    "workspaces": "Workspace",
+    "projects": "Project",
+    "warning": "Do you really want to log out?",
+    "imagesCardContent": {
+      "imageDetails": "Image details",
+      "imageName": "Image name",
+      "addedBy": "Added by",
+      "lastEditedBy": "Last edited by",
+      "lastUpdate": "Last update",
+      "usedInProject": "Used in project"
+    }
+  },
+  "loading": "Loading",
+  "errors": {
+    "commonTitle": "Ups... Something went wrong!",
+    "solvingStepsMessage": "To fix the error, try the following solutions:",
+    "responseError": {
+      "description": "Data loading error.",
+      "steps": {
+        "one": "Refresh the page",
+        "two": "Try to visit the page later",
+        "three": "Contact technical support"
+      }
+    }
+  },
+  "workspacePage": {
+    "imagesTitle": "Images",
+    "projectsInstruments": {
+      "filterTitle": "Show: ",
+      "addImagesInProjectButton": "Add to project"
+    }
+  },
+  "userGuide": {
+    "title": "Welcome to Marker",
+    "description": "User guide page in the development process"
+  },
+  "notFound": {
+    "return": "Return to main page",
+    "descriptions": {
+      "image": "Not found page image",
+      "body": "Sorry, but this page doesnt exist"
+    }
+  },
+  "tooltipText": {
+    "projectsCount": "Projects count",
+    "filesCount": "Number of files added to projects",
+    "imageMarkup": "Number of marked photos",
+    "dateUploadPhotos": "Date of the last uploaded photo",
+    "lastImageMarkup": "Date of the last image markup",
+    "imageDetails": "Image details"
+  },
+  "select": {
+    "chooseProject": "Choose project"
+  },
+  "calendar": {
+    "placeholder": "Select dates"
+  },
+  "imagesUploader": {
+    "uploadButton": "Click to download",
+    "addToGallery": "Assign to gallery",
+    "addToProject": "Assign to project"
+  },
+  "sharing": {
+    "select": {
+      "email": "Search member to invite by email",
+      "role": "Select member role",
+      "noOptions": "No search result option"
+    },
+    "blocksTitles": {
+      "invite": "Invite members",
+      "exist": "Existing members"
+    },
+    "invite": "Invite",
+    "remove": "Remove"
+  },
+  "tags": {
+    "createPlaceholder": "Tag name",
+    "addButton": "OK",
+    "confirmButton": "Confirm"
+  },
+  "kanva": {
+    "layerList": {
+      "operations": {
+        "add": "Add new layer"
+      }
+    },
+    "instruments": {
+      "polygon": "Polygon",
+      "line": "Line",
+      "rectangle": "Rectangle",
+      "addPoint": "Add point",
+      "color": "Select color",
+      "thickness": "Line thickness",
+      "hand": "Move image",
+      "select": "Select figures",
+      "delete": "Delete figures",
+      "tags": "Tags",
+      "layers": "Layers",
+      "prevStep": "Previous step",
+      "nextStep": "Next step",
+      "resize": "Resize",
+      "zoomPlus": "Zoom plus",
+      "zoomMinus": "Zoom minus",
+      "drawCursor": "Draw cursor"
+    },
+    "shortcuts": {
+      "title": "Tools Helper",
+      "drawCursor": {
+        "dblClck": "double click to delete point",
+        "altClck": "Alt+Click to show tags",
+        "rghtClck": "right click to highlight"
+      }
+    }
+  },
+  "dateRangePicker": {
+    "staticRangesLabels": {
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "thisWeek": "This Week",
+      "lastWeek": "Last Week",
+      "thisMonth": "This Month",
+      "lastMonth": "Last Month"
+    },
+    "inputRangesLabels": {
+      "daysUpToToday": "days up to today",
+      "daysStartingToday": "days starting today"
+    }
+  },
+  "sideBar": {"tabs": {"layers": "Layers tab", "images": "Images tab"}},
+  "default": {"noData": "Sorry, there are no data to display"},
+  "imagesFilter": {
+    "visabilityButton": {
+      "show": "Show filters",
+      "hide": "Hide filters"
+    },
+    "clearFilter": "Clear filters",
+    "options": {
+      "byDate": "By date:",
+      "byTime": {
+        "title": "By time (for the last):",
+        "firstTime": "1 hour",
+        "secondTime": "6 hours",
+        "thirdTime": "24 hours"
+      },
+      "byUsers": "By users"
+    }
+  }
+}

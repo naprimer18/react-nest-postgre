@@ -1,0 +1,47 @@
+@import "../../../commonStyles/main.module";
+
+.checkboxContainer {
+  @include flex($ali: center);
+  width: max-content;
+  min-height: 30px;
+  @include borderFocus;
+
+  &.error {
+    > div {
+      border: solid 1px $error-color;
+    }
+  }
+}
+
+.primary {
+  @include checkbox;
+}
+
+.secondary {
+  @include checkbox;
+  box-sizing: border-box;
+  min-width: 15px;
+  min-height: 15px;
+  height: 15px;
+  width: 15px;
+  border: 1.5px solid $icon-color;
+  background-color: $text-color-secondary;
+
+  &.checked {
+    background: url("../images/checked-white.svg") center no-repeat $icon-color;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: $text-color;
+  }
+}
+
+.checkboxLabel {
+  @include font_p_dark;
+  line-height: 30px;
+  user-select: none;
+  color: black;
+  width: 100%;
+  cursor: pointer;
+}

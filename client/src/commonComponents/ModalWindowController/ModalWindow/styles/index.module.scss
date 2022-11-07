@@ -1,0 +1,50 @@
+@import "../../../../commonStyles/main.module.scss";
+
+.modalContainer {
+  @include flex($just: center, $ali: center);
+  @include borderFocus;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+
+  &.hiddenModal {
+    height: 45px;
+    width: 300px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    left: auto;
+    top: auto;
+    overflow: hidden;
+    // border: 5px solid $border-color-secondary;
+    border-bottom: 4px solid $border-color-secondary;
+    display: block;
+  }
+
+  .modalContent {
+    background-color: $color-bg-modal;
+    max-width: 550px;
+    border: 4px solid $border-color-secondary;
+
+    .modalDescription {
+      padding: $main_padding $main_padding * 2;
+
+      h3 {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.activeModal {
+  z-index: $zIndex-popup;
+  pointer-events: all;
+}
+
+.activeContent {
+  cursor: default;
+}

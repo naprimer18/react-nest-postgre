@@ -1,0 +1,23 @@
+@import "../../../../../../commonStyles/main.module.scss";
+
+.hiddenModalTitle {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.showHideButtons {
+  align-self: flex-end;
+  height: auto;
+  padding: 5px;
+
+  svg {
+    width: 20px;
+    height: 30px;
+    margin: 0;
+    fill: $icon-color;
+
+    &:hover {
+      fill: $text-color;
+    }
+  }
+}

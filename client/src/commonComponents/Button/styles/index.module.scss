@@ -1,0 +1,64 @@
+@import "../../../commonStyles/main.module";
+
+.primary {
+  @include btn;
+}
+
+.secondary {
+  @include btn;
+  background-color: $color-bg-secondary;
+  color: $color-main;
+}
+
+.hollow {
+  @include borderFocus;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transparent {
+  @include btn;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  min-width: max-content;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:hover:not(:disabled) {
+    box-shadow: none;
+  }
+}
+
+.link {
+  @include btn;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  min-width: max-content;
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus:not(:active) {
+    outline: none;
+    @include borderFocus;
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:hover:not(:disabled) {
+    box-shadow: none;
+  }
+}
+
+.wide {
+  width: $btn-width-wide;
+}

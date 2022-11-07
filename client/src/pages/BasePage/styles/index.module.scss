@@ -1,0 +1,60 @@
+@import "src/commonStyles/main.module";
+
+.addTaskcontainer {
+  display:flex;
+  .taskName {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-right: 20px;
+  }
+
+  .addTaskButton {
+    background-color: #477bca; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #8bc0db;
+      color: white;
+    }
+  }
+}
+
+.taskListContainer {
+  display: flex;
+  .taskListItem {
+    font-size: 30px;
+  }
+  .deleteTaskButton {
+    background-color: #477bca; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 4px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: #8bc0db;
+      color: white;
+    }
+  }
+  
+}

@@ -1,0 +1,12 @@
+@import '../../../commonStyles/main.module';
+
+.block {
+  padding: 1px;
+}
+
+.header {
+  @include font_p_dark($weight: 600);
+  line-height: 3;
+  margin: $main-margin 0;
+  border-bottom: 2px solid $color-bg-main;
+}

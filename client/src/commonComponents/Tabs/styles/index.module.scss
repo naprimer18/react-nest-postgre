@@ -1,0 +1,55 @@
+@import '../../../commonStyles/main.module';
+
+.empty {
+  @include flex($ali: center, $just: center);
+  height: 100%;
+  width: 100%;
+}
+
+.container{
+  width: 100%;
+  @include customScrollbar;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  .tabs{
+    @include flex($ali: flex-end);
+    height: 45px;
+    padding: 10px;
+    position: fixed;
+    background: $text-color-secondary;
+    z-index: $zIndex-tabs;
+    .tab{
+      @include flex($ali: center, $just: center);
+      text-align: center;
+      padding: 10px;
+      border-radius: 2px;
+      margin-right: 5px;
+      min-width: 35px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.1);
+      transition-duration: .7s;
+      svg{
+        width: 15px;
+        height: auto;
+        transform: rotate(0);
+        color: $border-color-primary;
+      }
+      &.active{
+        background: $text-color-secondary;
+      }
+    }
+    .tab:hover{
+      cursor: pointer;
+      background: $text-color-secondary;
+      transition-duration: .7s;
+    }
+    .tab:last-of-type{
+      margin-right: 0;
+    }
+  }
+  .body{
+    padding: 5px;
+    margin-top: 55px;
+  }
+}

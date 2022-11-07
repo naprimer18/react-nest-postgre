@@ -1,0 +1,3 @@
+const I18N_DEFAULT_LANG = "EN";
+
+export { I18N_DEFAULT_LANG };
