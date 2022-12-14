@@ -11,7 +11,6 @@ import {
 import urls from "../../routes/urls";
 
 export const AuthPage = () => {
-  console.log("urls.AUTH_ROUTES.LOGIN_PAGE ", urls.AUTH_ROUTES.LOGIN_PAGE);
   return (
     <>
       <Router>

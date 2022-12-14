@@ -33,27 +33,35 @@ const GET_TASKS = gql`
 
 const ADD_TASKS = gql`
   mutation ADD_T($name: String!) {
-    addTask(name: $name) {	
-     id,
-     name
-   }
+    addTask(name: $name) {
+      id
+      name
+    }
   }
 `;
 
 const DELETE_TASK = gql`
   mutation REMOVE_T($id: Float!) {
-    removeTask(id: $id) {	
-     name
-   }
+    removeTask(id: $id) {
+      name
+    }
+  }
+`;
+
+const EDIT_TASK = gql`
+  mutation EDIT_T($id: Float!, $name: String!) {
+    editTask(id: $id, name: $name) {
+      name
+    }
   }
 `;
 
 export const BasePage = () => {
   const { data, refetch } = useQuery(GET_TASKS);
   const [addTask] = useMutation(ADD_TASKS);
-  const [removeTask, error] = useMutation(DELETE_TASK);
-  console.log("data ", data, "error ", error);
-  const dispatch = useDispatch();
+  const [removeTask] = useMutation(DELETE_TASK);
+  const [editTask] = useMutation(EDIT_TASK);
+
   const tasksCollection = useSelector(
     (store: RootState) => store.Tasks.collection
   );
@@ -66,10 +74,6 @@ export const BasePage = () => {
     id: 0,
   });
 
-  // useEffect(() => {
-  //   dispatch(getTasksAction());
-  // }, []);
-
   const onAddMessage = async () => {
     await addTask({ variables: { name: currentTask } });
     await refetch();
@@ -77,15 +81,16 @@ export const BasePage = () => {
   };
 
   const onDeleteTask = async (itemId: number) => {
-    console.log("id ", itemId); 
-    await removeTask({ variables: { id: itemId } })
+    await removeTask({ variables: { id: itemId } });
     await refetch();
-    // dispatch(deleteTaskAction(JSON.stringify(id)));
   };
 
   const onEditTask = async () => {
     setEditableTask({ id: 0, name: "" });
-    dispatch(editTaskAction(editableTask));
+    await editTask({
+      variables: { id: editableTask.id, name: editableTask.name },
+    });
+    await refetch();
   };
 
   const refreshCurrentMessage = (e: any) => {
@@ -94,8 +99,6 @@ export const BasePage = () => {
 
   return (
     <div>
-      {/* Home
-      <button onClick={logOut}>logOut</button> */}
       <div className={style.addTaskcontainer}>
         <input
           className={style.taskName}

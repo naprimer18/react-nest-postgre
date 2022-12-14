@@ -1,5 +1,5 @@
 import { Query, Mutation, Resolver, Args } from '@nestjs/graphql';
-import { Task } from './task.entity';
+import { Task } from 'src/typeorm/task.entity';
 import { TasksService } from './tasks.service';
 
 @Resolver(() => Task)

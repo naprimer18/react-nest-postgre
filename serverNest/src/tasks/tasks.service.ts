@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { Task } from 'src/typeorm/task.entity';
 import { Repository } from 'typeorm';
-import { Task } from './task.entity';
 
 @Injectable()
 export class TasksService {
@@ -20,14 +20,13 @@ export class TasksService {
   }
 
   async removeTask(id: number) {
-    console.log('id ', id);
     const task = await this.taskRepository.findOne(id);
     await this.taskRepository.remove(task);
     return task;
   }
 
   async editTask(id: number, name: string) {
-    await this.taskRepository.update({ id }, { id, name });
+    await this.taskRepository.update(id , {name} );
     return this.taskRepository.findOne(id);
   }
 }
