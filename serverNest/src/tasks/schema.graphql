@@ -2,3 +2,13 @@ type Task {
   id: ID
   name: String
 }
+
+type Query {
+  getAllTasks: [Task!]!
+}
+
+type Mutation {
+  addTask(name: String!): Task!
+  editTask(id: Float!, name: String!): Task!
+  removeTask(id: Float!): Task!
+}

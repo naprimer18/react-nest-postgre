@@ -26,7 +26,7 @@ export class TasksService {
   }
 
   async editTask(id: number, name: string) {
-    await this.taskRepository.update(id , {name} );
+    await this.taskRepository.update(id, { name });
     return this.taskRepository.findOne(id);
   }
 }

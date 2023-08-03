@@ -21,13 +21,20 @@ import { join } from 'path';
         database: configService.get('DB_NAME'),
         entities: entities,
         synchronize: true,
+        autoLoadEntities: true,
       }),
       inject: [ConfigService],
     }),
     TasksModule,
     GraphQLModule.forRoot({
       driver: ApolloDriver,
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      // autoSchemaFile: join(process.cwd(), 'src/schema.gql') // code first
+      typePaths: ['./**/*.graphql'], // schema first
+      definitions: {
+        path: join(process.cwd(), 'src/graphql.ts'),
+        // outputAs: 'class',
+        skipResolverArgs: true,
+      },
     }),
   ],
   controllers: [],

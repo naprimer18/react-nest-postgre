@@ -1,13 +1,6 @@
 import { gql, useMutation, useQuery } from "@apollo/client";
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store";
-import {
-  addTaskAction,
-  deleteTaskAction,
-  getTasksAction,
-  editTaskAction,
-} from "../../store/Tasks/actions";
+import React, { useState } from "react";
+
 import { ITask } from "../../store/Tasks/models";
 
 //styles
@@ -22,11 +15,18 @@ import style from "./styles/index.module.scss";
 //   }
 // `;
 
+export const CORE_TASK_FIELDS = gql`
+  fragment tasksOptions on Task {
+    name
+    id
+  }
+`;
+
 const GET_TASKS = gql`
+  ${CORE_TASK_FIELDS}
   query GET_T {
     getAllTasks {
-      name
-      id
+      ...tasksOptions
     }
   }
 `;
@@ -57,14 +57,10 @@ const EDIT_TASK = gql`
 `;
 
 export const BasePage = () => {
-  const { data, refetch } = useQuery(GET_TASKS);
+  const { data } = useQuery(GET_TASKS);
   const [addTask] = useMutation(ADD_TASKS);
   const [removeTask] = useMutation(DELETE_TASK);
   const [editTask] = useMutation(EDIT_TASK);
-
-  const tasksCollection = useSelector(
-    (store: RootState) => store.Tasks.collection
-  );
   const [currentTask, setCurrentTask] = useState("");
   const [editableTask, setEditableTask] = useState<{
     name: string,
@@ -75,22 +71,26 @@ export const BasePage = () => {
   });
 
   const onAddMessage = async () => {
-    await addTask({ variables: { name: currentTask } });
-    await refetch();
+    await addTask({
+      variables: { name: currentTask },
+      refetchQueries: [{ query: GET_TASKS }],
+    });
     setCurrentTask("");
   };
 
   const onDeleteTask = async (itemId: number) => {
-    await removeTask({ variables: { id: itemId } });
-    await refetch();
+    await removeTask({
+      variables: { id: itemId },
+      refetchQueries: [{ query: GET_TASKS }],
+    });
   };
 
   const onEditTask = async () => {
     setEditableTask({ id: 0, name: "" });
     await editTask({
       variables: { id: editableTask.id, name: editableTask.name },
+      refetchQueries: [{ query: GET_TASKS }],
     });
-    await refetch();
   };
 
   const refreshCurrentMessage = (e: any) => {

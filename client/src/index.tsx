@@ -10,13 +10,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 
 //graphql
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql,
-} from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 // Component
 import App from "./AppConfig";
