@@ -17,12 +17,13 @@ export class TaskResolvers {
   }
 
   @Mutation(() => Task)
-  async editTask(@Args('id') id: number, @Args('name') name: string) {
+  async editTask(@Args('id') id: string, @Args('name') name: string) {
     return this.taskService.editTask(id, name);
   }
 
   @Mutation(() => Task)
-  async removeTask(@Args('id') id: number) {
+  async removeTask(@Args('id') id: string) {
+    console.log('id ', id);
     return this.taskService.removeTask(id);
   }
 }

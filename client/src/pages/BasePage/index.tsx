@@ -41,7 +41,7 @@ const ADD_TASKS = gql`
 `;
 
 const DELETE_TASK = gql`
-  mutation REMOVE_T($id: Float!) {
+  mutation REMOVE_T($id: String!) {
     removeTask(id: $id) {
       name
     }
@@ -49,7 +49,7 @@ const DELETE_TASK = gql`
 `;
 
 const EDIT_TASK = gql`
-  mutation EDIT_T($id: Float!, $name: String!) {
+  mutation EDIT_T($id: String!, $name: String!) {
     editTask(id: $id, name: $name) {
       name
     }

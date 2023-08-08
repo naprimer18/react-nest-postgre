@@ -9,6 +9,6 @@ type Query {
 
 type Mutation {
   addTask(name: String!): Task!
-  editTask(id: Float!, name: String!): Task!
-  removeTask(id: Float!): Task!
+  editTask(id: String!, name: String!): Task!
+  removeTask(id: String!): Task!
 }

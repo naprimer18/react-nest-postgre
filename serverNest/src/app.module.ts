@@ -10,6 +10,7 @@ import { join } from 'path';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
+    // db
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
@@ -25,7 +26,7 @@ import { join } from 'path';
       }),
       inject: [ConfigService],
     }),
-    TasksModule,
+    // graphql
     GraphQLModule.forRoot({
       driver: ApolloDriver,
       // autoSchemaFile: join(process.cwd(), 'src/schema.gql') // code first
@@ -36,6 +37,8 @@ import { join } from 'path';
         skipResolverArgs: true,
       },
     }),
+    // services
+    TasksModule,
   ],
   controllers: [],
   providers: [],

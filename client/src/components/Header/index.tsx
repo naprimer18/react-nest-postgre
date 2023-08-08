@@ -26,7 +26,7 @@ export const Header = () => {
           type={link}
           tabIndex={MODAL_TAB_INDEX}
           onClick={() => goToPage(urls.HEADER_ROUTES.BASE_APP_PAGE)}
-          title={t("links.marker")}
+          title={t("links.vlad")}
         />
         <Button
           type={link}

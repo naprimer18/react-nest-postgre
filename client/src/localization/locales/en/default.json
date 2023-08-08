@@ -1,5 +1,5 @@
 {
-  "appName": "Marker",
+  "appName": "vlad",
   "welcome": "Welcome to",
 
   "pageNames": {
@@ -27,7 +27,7 @@
   "links": {
     "about": "About",
     "addWorkspaces": "Add workspaces",
-    "marker": "Marker"
+    "vlad": "vlad"
   },
   "cardsWrapper": {
     "addCard": {
@@ -94,7 +94,7 @@
     }
   },
   "userGuide": {
-    "title": "Welcome to Marker",
+    "title": "Welcome to vlad",
     "description": "User guide page in the development process"
   },
   "notFound": {
