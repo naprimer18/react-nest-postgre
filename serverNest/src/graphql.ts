@@ -10,6 +10,7 @@
 export interface Task {
     id?: Nullable<string>;
     name?: Nullable<string>;
+    message?: Nullable<string>;
 }
 
 export interface IQuery {

@@ -6,5 +6,8 @@ export class EditTaskInput {
   name: string;
 
   @Field()
+  message: string;
+
+  @Field()
   id: number;
 }

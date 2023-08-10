@@ -4,4 +4,7 @@ import { InputType, Field } from '@nestjs/graphql';
 export class AddTaskInput {
   @Field()
   name: string;
+
+  @Field()
+  message: string;
 }

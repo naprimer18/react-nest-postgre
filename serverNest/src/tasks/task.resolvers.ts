@@ -13,7 +13,7 @@ export class TaskResolvers {
 
   @Mutation(() => Task)
   async addTask(@Args('name') name: string) {
-    return this.taskService.addTask(name);
+    return this.taskService.addTask(name, 'test1');
   }
 
   @Mutation(() => Task)

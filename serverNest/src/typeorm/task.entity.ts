@@ -14,8 +14,12 @@ export class Task {
   id: number;
 
   @Field()
-  @Column({ length: 30 })
+  @Column()
   name: string;
+
+  @Field()
+  @Column()
+  message: string;
 
   @CreateDateColumn()
   created_at: Date;

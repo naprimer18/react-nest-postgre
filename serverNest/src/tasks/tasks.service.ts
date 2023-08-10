@@ -10,12 +10,11 @@ export class TasksService {
   ) {}
 
   async getTasks(): Promise<Task[]> {
-    console.log('gett11 ');
     return await this.taskRepository.find();
   }
 
-  async addTask(name: string) {
-    const obj = { name: name };
+  async addTask(name: string, message: string) {
+    const obj = { name: name, message: message || 'test' };
     const newTask = this.taskRepository.create(obj);
     return await this.taskRepository.save(newTask);
   }

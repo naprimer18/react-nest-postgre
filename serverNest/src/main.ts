@@ -15,5 +15,6 @@ async function bootstrap() {
 
   app.enableCors();
   await app.listen(8080);
+  console.log(`Server listening on ${8080}`);
 }
 bootstrap();
