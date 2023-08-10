@@ -6,7 +6,6 @@ import { ApolloDriver } from '@nestjs/apollo';
 import { TasksModule } from './tasks/tasks.module';
 import entities from './typeorm';
 import { join } from 'path';
-import { TelegramModule } from './telegram/telegram.module';
 
 @Module({
   imports: [
@@ -40,7 +39,6 @@ import { TelegramModule } from './telegram/telegram.module';
     }),
     // services
     TasksModule,
-    TelegramModule,
   ],
   controllers: [],
   providers: [],
