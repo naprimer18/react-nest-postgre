@@ -12,6 +12,7 @@ services:
 
   nodejs:
     container_name: my_service
+    hostname: localhost
     build:
       context: .
       dockerfile: Dockerfile.dev

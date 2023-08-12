@@ -22,7 +22,7 @@ import "./commonStyles/_common.module.scss";
 import "./commonStyles/main.module.scss";
 
 const client = new ApolloClient({
-  uri: "http://localhost:8080/graphql",
+  uri: "http://localhost:9229/graphql",
   cache: new InMemoryCache(),
 });
 const rootElement = document.getElementById("root");
