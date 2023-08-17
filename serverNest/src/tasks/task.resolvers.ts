@@ -12,18 +12,21 @@ export class TaskResolvers {
   }
 
   @Mutation(() => Task)
-  async addTask(@Args('name') name: string) {
-    return this.taskService.addTask(name, 'test1');
+  async addTask(
+    @Args('peopleId') peopleId: string,
+    @Args('message') message: string,
+  ) {
+    return this.taskService.addTask(peopleId, message);
   }
 
-  @Mutation(() => Task)
-  async editTask(@Args('id') id: string, @Args('name') name: string) {
-    return this.taskService.editTask(id, name);
-  }
+  // @Mutation(() => Task)
+  // async editTask(@Args('id') id: string, @Args('name') name: string) {
+  //   return this.taskService.editTask(id, name);
+  // }
 
-  @Mutation(() => Task)
-  async removeTask(@Args('id') id: string) {
-    console.log('id ', id);
-    return this.taskService.removeTask(id);
-  }
+  // @Mutation(() => Task)
+  // async removeTask(@Args('id') id: string) {
+  //   console.log('id ', id);
+  //   return this.taskService.removeTask(id);
+  // }
 }

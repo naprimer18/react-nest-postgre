@@ -6,6 +6,7 @@ import { ApolloDriver } from '@nestjs/apollo';
 import { TasksModule } from './tasks/tasks.module';
 import entities from './typeorm';
 import { join } from 'path';
+import { PeopleModule } from './people/people.module';
 
 @Module({
   imports: [
@@ -39,6 +40,7 @@ import { join } from 'path';
     }),
     // services
     TasksModule,
+    PeopleModule,
   ],
   controllers: [],
   providers: [],

@@ -1,6 +1,6 @@
 type Task {
   id: ID
-  name: String
+  peopleId: String
   message: String
 }
 
@@ -9,7 +9,7 @@ type Query {
 }
 
 type Mutation {
-  addTask(name: String!): Task!
-  editTask(id: String!, name: String!): Task!
-  removeTask(id: String!): Task!
+  addTask(peopleId: String, message: String!): Task
+  editTask(id: String!, peopleId: String, message: String!): Task
+  removeTask(id: String!): Task
 }

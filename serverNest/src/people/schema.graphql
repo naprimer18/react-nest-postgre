@@ -1,0 +1,10 @@
+type People {
+  id: ID
+  name: String
+  message: String
+  tasks: [Task]
+}
+
+type Query {
+  getPeople: [People!]!
+}
