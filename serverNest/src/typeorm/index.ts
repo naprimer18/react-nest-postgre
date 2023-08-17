@@ -1,7 +1,7 @@
-import { People } from './people.entity';
-import { Task } from './task.entity';
+import { User } from './user.entity';
+import { Note } from './note.entity';
 
-const entities = [Task, People];
+const entities = [Note, User];
 
-export { Task, People };
+export { Note, User };
 export default entities;

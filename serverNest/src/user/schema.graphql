@@ -1,0 +1,16 @@
+type User {
+  id: ID
+  name: String
+  notes: [Note]
+}
+
+type Query {
+  getUsers: [User!]!
+  getUsersById(id: ID): User
+}
+
+type Mutation {
+  createUser(name: String): User
+  updateUser(id: ID, name: String): User
+  deleteUser(id: ID): ID
+}

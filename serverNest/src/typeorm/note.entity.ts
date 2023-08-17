@@ -3,16 +3,16 @@ import {
   Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
-  ManyToOne,
+  // ManyToOne,
 } from 'typeorm';
 import { Field, ObjectType, Int } from '@nestjs/graphql';
-import { People } from './people.entity';
+// import { User } from './user.entity';
 
 @ObjectType()
-@Entity('task')
-export class Task {
+@Entity('note')
+export class Note {
   @Field(() => Int)
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: number;
 
   @Field()
@@ -22,6 +22,8 @@ export class Task {
   @CreateDateColumn()
   created_at: Date;
 
-  @ManyToOne(() => People, (people) => people.tasks)
-  peopleId: string;
+  // @ManyToOne(() => User, (user) => user.notes)
+  @Field()
+  @Column()
+  userId: string;
 }

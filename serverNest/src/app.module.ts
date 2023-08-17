@@ -3,10 +3,10 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver } from '@nestjs/apollo';
-import { TasksModule } from './tasks/tasks.module';
 import entities from './typeorm';
 import { join } from 'path';
-import { PeopleModule } from './people/people.module';
+import { UserModule } from './user/user.module';
+import { NoteModule } from './note/note.module';
 
 @Module({
   imports: [
@@ -39,8 +39,8 @@ import { PeopleModule } from './people/people.module';
       },
     }),
     // services
-    TasksModule,
-    PeopleModule,
+    UserModule,
+    NoteModule,
   ],
   controllers: [],
   providers: [],
